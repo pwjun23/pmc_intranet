@@ -746,3 +746,26 @@ table.table-permission input[type="text"] {
   width: 90px; }
 
 /*# sourceMappingURL=style.css.map */
+
+/* 공지사항 > 일반 게시판 스타일 */
+
+table.table-notice th{
+  text-align: left;
+ /* background: #d8d8d8;
+  color: #606060; */
+  font-weight: 500;
+  border: 1px solid #f4f4f4 !important; } 
+ table.table-notice td.title{
+  font-weight:bold; }  
+table.table-notice td {
+  background: white;
+  text-align:left;}
+table.table-notice tr td.notice-body{
+	word-break:break-all;
+	padding:40px;
+	min-height:400px;
+	height:400px;}	
+table.table-notice tr td a .file-donloard{
+	padding-right: 20px;
+	display:inline-block;
+	float:left;}  
