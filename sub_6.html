@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9 ie8" dir="ltr" lang="ko-KR"> <![endif]-->
+	<!--[if IE 9]> <html class="no-js lt-ie10 ie9" dir="ltr" lang="ko-KR"> <![endif]-->
+	<meta charset="UTF-8">
+	<title>폴리미래인트라넷 게시판 관리페이지</title>
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="dist/summernote.css" rel="stylesheet">	
+	<link href="dist/font-awesome.min.css" rel="stylesheet">	
+	<link rel="stylesheet" href="dist/bootstrap-tagsinput.css">
+	<link rel="stylesheet" href="dist/bootstrap.fd.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	
+</head>
+<body>
+<!--[if lte IE 8]>
+<p class="browserupgrade">사용 중인 웹 브라우저는 <strong>보안이 보장되지 않는 오래되었습니다</strong>.
+<a href="http://browsehappy.com/">사용 중인 웹 브라우저를 업그레이드</a>하셔서 안전하고 빠른 웹 서핑을 하시길 권합니다.</p>
+<![endif]-->
+<!-- <div class="gnb">
+	<div class="container">
+		<div class="row">
+			<div class="">
+			</div>
+		</div>
+	</div>
+</div> -->
+<!-- <header class="page-header">
+	<nav class="navbar">
+	        <div class="navbar-header  col-xs-2">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#"><h1><img src="images/logo_pmc_white.png" alt="폴리미래로고" class="brand-img"></h1></a>
+	        </div>
+	        <div id="navbar" class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav navbar-right">
+	            <li><a href="#"></a></li>
+	            <li><a href="#"></a></li>
+	            <li><a href="#"></a></li>
+	            <li><a href="#"></a></li>
+	          </ul>
+	        </div>
+	        <div class="col-xs-10"></div>
+	    </nav> 
+</header>-->
+<div class="body">	
+	<div class="container">
+		<div class="row">
+			<div class="left sidebar">
+				<div class="navbar-header">
+					<a class="" href="#"><img src="images/brand.png" alt="폴리미래로고" class="brand-img"></a>
+					<div class="userArea">
+						<span class="department">정보시스템실</span>&nbsp;<span class="name">아무개</span><span class="rank">과장</span><button class="btn btn-default pull-right"><span class="icon-icon_menu"></span></button>
+					
+					</div>
+					<div class="userStatus">
+						<div class="col-xs-4">
+							<span class="currentNum">1.2GB</span>&nbsp;<span class="icon-icon_sep"></span><span class="totalNum">&nbsp;2GB</span><br>
+							<span class="title">Capacity</span>
+						</div>
+						<div class="col-xs-4">
+							<span class="icon-icon_letter"></span><span class="currentNum">&nbsp;14</span><br>
+							<span class="title">should read </span>
+						</div>
+						<div class="col-xs-4">
+							<span class="icon-icon_doc"></span><span class="currentNum">&nbsp;12</span><br>
+							<span class="title">Waiting</span>
+						</div>
+					</div>
+
+				</div>
+				<ul class="nav nav-sidebar">
+		            <li><a href="#!"><span class="icon-icon_open"></span>공지사항<br><span class="subTitle">Notice</span></a>
+		            	<ul class="subMenu">
+		            		<li><a href="#!">일반공지</a></li>
+		            	</ul>
+		            </li>
+		            <li><a href="#!"><span class="icon-icon_open"></span>정책 및 규정<br><span class="subTitle">Policies and Regulations</span></a>
+		            	<ul class="subMenu">
+		            		<li><a href="#!">경영일반</a></li>
+		            	</ul>
+		            </li>
+		            <li><a href="#!"><span class="icon-icon_open"></span>HR Portal<br><span class="subTitle">HR Potal</span></a>
+		            	<ul class="subMenu">
+		            		<li><a href="#!">안내페이지</a></li>
+		            		<li><a href="#!">근태</a></li>
+		            		<li><a href="#!">평가</a></li>
+		            		<li><a href="#!">복리후생</a></li>
+		            	</ul>
+		            </li>
+		            <li><a href="#!"><span class="icon-icon_open"></span>업무지원<br><span class="subTitle">Business Support</span></a>
+		            	<ul class="subMenu">
+		            		<li><a href="#!">전사평가회의</a></li>
+		            		<li><a href="#!">OPT Meeting</a></li>
+		            		<li><a href="#!">운송단가동향</a></li>
+		            		<li><a href="#!">업무통제사건보고</a></li>
+		            		<li><a href="#!">Progress Status Report</a></li>
+		            		<li><a href="#!">법정자격관리</a></li>
+		            		<li><a href="#!">영업부문 자료 공유</a></li>
+		            		<li><a href="#!">사내도서관</a></li>
+		            	</ul>
+		            </li>
+		            <li class=""><a href="#!"><span class="icon-icon_open"></span>전자결제<br><span class="subTitle">Electronic Settlement </span></a>
+		            	<ul class="subMenu">
+		            		<li class=""><a href="#!">신청서 작성 <span class="badge">8</span></a></li>
+		            		<li class=""><a href="#!">결재 문서함 <span class="badge">8</span></a></li>
+		            		<li class=""><a href="#!">올린 문서함</a></li>
+		            		<li class=""><a href="#!">종결 문서함</a></li>
+		            		<li class=""><a href="#!">문서함 관리</a></li>
+		            	</ul>
+		            </li>
+		            <li><a href="#!"><span class="icon-icon_open"></span>문서관리<br><span class="subTitle">Document Management</span></a>
+		            	<ul class="subMenu">
+		            		<li><a href="#!">계약서 관리</a></li>
+		            		<li><a href="#!">법정교육증빙관리</a></li>
+		            	</ul>
+		            </li>
+		            <li class=""><a href="#!"><span class="icon-icon_open"></span>내 정보<br><span class="subTitle">My page</span></a>
+		            	<ul class="subMenu">
+		            		<li><a href="#!">나의 결재선</a></li>
+		            		<li><a href="#!">개인정보 수정</a></li>
+		            	</ul>
+		            </li>
+		            <li class="active">
+		            	<a href="#!"><span class="icon-icon_open"></span>관리자 페이지<br><span class="subTitle">Admin Page</span></a>
+		            	<ul class="subMenu">
+		            		<li class="active"><a href="#!">관리</a></li>
+		            		<li><a href="#!">권한 관리</a></li>
+		            		<li><a href="#!">사용자 정보 관리</a></li>
+		            	</ul>
+		            </li>
+		        </ul>
+			</div>
+			<div class="right main">
+				
+				<div class="main-content container-main-content">
+					<h2>나의 결재선</h2>
+				  	<div class="row">
+				  		<div class="col-xs-12">
+				  			<table class="table table-striped table-hover table-docAdmin">
+								<thead>
+									<tr>
+										<th>번호</th><th>결재선명</th><th>개요</th><th>작성일</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr><td>1</td><td>인사부 제출용</td><td>> 김인사</td><td>2016-05-26 15:00</td></tr>
+									<tr><td>2</td><td>IT 관련 결재선</td><td>> 박재성</td><td>2016-05-26 15:00</td></tr>
+									<tr><td>3</td><td>출장 결재선</td><td>> 이순신 > 김유신</td><td>2016-05-26 15:00</td></tr>
+									<tr><td>4</td><td>명함/소모품 결재선</td><td>> 갬재동</td><td>2016-05-26 15:00</td></tr>
+									<tr><td>5</td><td>명함 신청서</td><td>> 김유신</td><td>2016-05-26 15:00</td></tr>
+								</tbody>
+							</table>
+				  		</div>
+				  	</div>
+				  	<div class="row">
+				  		<div class="col-xs-12"><button class="btn btn-primary btn-modifyOpen"><i class="fa fa-plus" aria-hidden="true"></i> 등록</button></div>
+				  	</div>
+			 	</div>
+			 	<div class="main-content container-main-content doc-modify-sign" style="display: none;">
+					<button class="close pull-right "><span class="glyphicon glyphicon-remove"></span></button>
+					<h2>결재선 등록 (수정)</h2>
+					<form action="" class="form-horizontal">
+						<div class="form-group">
+							<div class="col-xs-1">
+								<label for="" class="">결재선 명</label>
+							</div>
+							<div class="col-xs-11">
+								<input type="text" class="form-control" value="휴가 신청서용 결재선">
+							</div>
+						</div>
+						<div>
+							<div class="btn btn-sm btn-warning btn-level"><span class="glyphicon glyphicon-plus"></span>&nbsp;단계추가</div>
+						</div>
+						<br>
+						<div class="form-group">
+							<div class="col-xs-12">
+								<div class="btn btn-success pull-left btn-level" data-toggle="modal" data-target="#modal-levelNaming">1차</div>
+								<input type="text" class="form-control" data-role="tagsinput" value="이순신 과장">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-12">
+								<div class="btn btn-success pull-left btn-level">2차</div>
+								<input type="text" class="form-control" data-role="tagsinput" value="김유신 과장, 조원재 과장">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-12">
+								<div class="btn btn-success pull-left btn-level">3차</div>
+								<input type="text" class="form-control" data-role="tagsinput" value="홍길동 부장">
+							</div>
+						</div>
+						<br>
+						<div class="form-group">
+							<div class="col-xs-12">
+								<div class="btn btn-success pull-left btn-level">참조</div>
+								<input type="text" class="form-control" data-role="tagsinput" value="사순신 부장">
+							</div>
+						</div>										
+						<button type="submit" class="btn btn-primary pull-left"><i class="fa fa-floppy-o" aria-hidden="true"></i> 저장</button>&nbsp;&nbsp;
+						<button type="button"  class="btn btn-danger close-modify"><i class="fa fa-times" aria-hidden="true"></i> 취소</button>
+					</form>
+				</div>
+			</div><!-- main 끝 -->
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="container">
+			<div class="row">
+				<div class="left">
+					<ul>
+						<li><a href="#!">사이트작업</a><span class="icon-icon_sep"></span></li>
+						<li><a href="#!">위로탐색</a><span class="icon-icon_sep"></span></li>
+						<li><a href="#!">페이지</a><span class="icon-icon_sep"></span></li>
+						<li><a href="#!">즐겨찾기</a></li>    
+					</ul>
+				</div>
+				<div class="right">
+					<div class="container-main-content">
+						<ul class="lang">
+							<li><a class="active" href="">KR</a><span class="icon-icon_sep"></span></li>
+							<li><a href="">EN</a></li>
+						</ul>
+						<div class="dropup pull-right">
+						  <button class="btn btn-default dropdown-toggle btn-linkSites" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    Link Sites
+						    <img src="images/icon_up.png" class="icon-up">
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+						    <li><a href="#">폴리미래</a></li>
+						    <li><a href="#">폴리미래메인</a></li>
+						    <li><a href="#">폴리미래홈페이지</a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">폴리</a></li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 단계명 수정 모달 -->
+<div class="modal fade in" id="modal-levelNaming" tabindex="-1" role="dialog" aria-labelledby="">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">        
+      <button class="close pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
+      </div>
+      <div class="modal-body">
+      	<div class="row">
+      		<div class="col-xs-12">
+      			<form action="" class="form-inline">
+      				<div class="form-group">
+      					<label for="">단계명&nbsp;&nbsp;</label>
+      					<input type="text" class="form-control" value="담당">
+      				</div>
+				  	<div class="pull-right">
+				  		<button type="button" class="btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i> 저장</button>
+				  		<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> 취소</button>
+				  	</div>
+      			</form>
+      		</div>
+      	</div>
+      </div>		      
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="dist/summernote.min.js"></script>
+<script src="dist/jquery.validate.min.js"></script>
+<script src="dist/summernote-ko-KR.min.js"></script>
+<script src="dist/messages_ko.min.js"></script>
+<script src="dist/bootstrap-tagsinput.js"></script><!-- 참고 레퍼런스 http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/ -->
+<script src="dist/bootstrap.fd.js"></script>
+<script src="js/common.js"></script>
+<script>
+	var $doc_modify = $('.doc-modify-sign');//수정화면
+	var $doc_main = $('.right > .main-content');// 결제문서함 화면
+	var $closeBtn = $('.close-modify');// 수정화면닫기 버튼
+
+	function showMain(){//결제문서함 보기
+		$doc_main.show();
+		$doc_modify.hide();	
+	}
+	function showModify(){//수정화면 보기
+		$doc_main.hide();
+		$doc_modify.show();
+	}
+
+	$('.doc-modify-sign > .close').click(function(){	//수정화면에서 x닫기 버튼 클릭시
+		showMain();
+	});
+	$('.btn-modifyOpen').click(function(){// 
+		showModify();
+	});
+	$closeBtn.click(function(){//수정화면 닫기 버튼 클릭시
+		showMain();
+	});
+
+	//showModify();
+</script>
+</body>
+</html>

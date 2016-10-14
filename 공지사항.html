@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9 ie8" dir="ltr" lang="ko-KR"> <![endif]-->
+	<!--[if IE 9]> <html class="no-js lt-ie10 ie9" dir="ltr" lang="ko-KR"> <![endif]-->
+	<meta charset="UTF-8">
+	<title>폴리미래인트라넷 게시판 관리페이지</title>
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="dist/summernote.css" rel="stylesheet">	
+	<link href="dist/bootstrap-treeview.min.css" rel="stylesheet">	
+	<link rel="stylesheet" href="css/style.css">
+
+	
+</head>
+<body>
+<!--[if lte IE 8]>
+<p class="browserupgrade">사용 중인 웹 브라우저는 <strong>보안이 보장되지 않는 오래되었습니다</strong>.
+<a href="http://browsehappy.com/">사용 중인 웹 브라우저를 업그레이드</a>하셔서 안전하고 빠른 웹 서핑을 하시길 권합니다.</p>
+<![endif]-->
+<!-- <div class="gnb">
+	<div class="container">
+		<div class="row">
+			<div class="">
+			</div>
+		</div>
+	</div>
+</div> -->
+<!-- <header class="page-header">
+	<nav class="navbar">
+	        <div class="navbar-header  col-xs-2">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#"><h1><img src="images/logo_pmc_white.png" alt="폴리미래로고" class="brand-img"></h1></a>
+	        </div>
+	        <div id="navbar" class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav navbar-right">
+	            <li><a href="#"></a></li>
+	            <li><a href="#"></a></li>
+	            <li><a href="#"></a></li>
+	            <li><a href="#"></a></li>
+	          </ul>
+	        </div> 
+	        <div class="col-xs-10"></div>
+	    </nav> 
+</header>-->
+<div class="body">	
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2 sidebar">
+					<div class="row nav-wrap">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#"><h1><img src="images/logo_pmc_white.png" alt="폴리미래로고" class="brand-img"></h1></a>
+						</div>
+					</div>
+					<ul class="nav nav-sidebar">
+			            <li><a href="게시판생성.html">게시판생성</a></li>
+			            <li><a href="게시판수정.html">게시판수정</a></li>
+			            <li><a href="공지사항.html">공지사항</a></li>
+			            <li><a href="도서관리.html">도서관리</a></li>
+			            <li><a href="도서대출반납현황.html">도서 대출 반납 현황</a></li>		            
+			            <li><a href="도서보유현황.html">도서보유현황</a></li>
+			        </ul>
+				</div>
+				<div class="col-xs-10 main doc-noticeList">
+					<h2>공지사항</h2>
+					<!-- 폼 시작 -->
+					<form class="form-inline" id="form_detailSearch">
+						<div class="panel panel-primary collapse" id="collapseDetailSearch">
+							<div class="panel-heading">
+								<h3 class="panel-title">상세검색</h3><button class="close">x</button>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="form-group">
+											<label for="" class="form-controls title">제목</label><input type="text" class="form-control">
+										</div>&nbsp;&nbsp;&nbsp;&nbsp;
+										<div class="form-group">
+											<label class="form-controls title">동록일</label><input type="date" class="form-control">&nbsp;~&nbsp;<input type="date" class="form-control">
+										</div>
+										<div class="form-group pull-right">&nbsp;&nbsp;&nbsp;&nbsp;
+											<label class="form-controls title">작성자</label><input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="form-group"><label for="" class="form-controls title">카테고리</label></div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="panel panel-default">
+											<div class="panel-body">
+												<div class="form-group">
+													<input type="checkbox" class="form-controls" id="category-1"><label for="category-1">1 단계 첫번째 카테고리</label>
+												</div><br>
+												<div class="form-group">
+													<span class="icon-category-down depth-2"></span><input type="checkbox" class="form-controls" id="category-2"><label for="category-2">2 단계 첫번째 카테고리</label>
+												</div><br>
+												<div class="form-group">
+													<span class="icon-category-down depth-3"></span><input type="checkbox" class="form-controls" id="category-3"><label for="category-3">2 단계 첫번째 카테고리2</label>
+												</div><br>
+												<div class="form-group">
+													<input type="checkbox" class="form-controls" id="category-4"><label for="category-4">1 단계 세번째 카테고리</label>
+												</div><br>
+												<div class="form-group">
+													<span class="icon-category-down depth-2"></span><input type="checkbox" class="form-controls" id="category-5"><label for="category-5">2 단계 첫번째 카테고리</label>
+												</div><br>
+											</div>
+										</div>
+										<button class="btn btn-info pull-right" type="submit" for=""><span class="glyphicon glyphicon-search"></span>&nbsp;검색</button>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</form>
+					<div class="row">
+						<div class="col-xs-12">
+							<button class="btn btn-primary pull-right btn-detailSearch"" type="button" data-toggle="collapse" data-target="#collapseDetailSearch" aria-expanded="false" aria-controls="collapseExample">
+							<span class="glyphicon glyphicon-search"></span>&nbsp;상세검색</button>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-xs-12">
+							<table class="table table-bordered table-striped">
+								<thead>
+									<tr>
+										<th>번호</th><th>제목</th><th>카테고리</th><th>작성자명</th><th>등록일시</th><th>첨부</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr><td>104</td><td>공지사항 안내 104 입니다.</td><td>2단계 카테고리 3</td><td>홍길동</td><td>2016.08.04</td><td><span class="glyphicon glyphicon-paperclip"></span></td></tr>
+									<tr><td>104</td><td>공지사항 안내 104 입니다.</td><td>2단계 카테고리 3</td><td>홍길동</td><td>2016.08.04</td><td><span class="glyphicon glyphicon-paperclip"></span></td></tr>
+									<tr><td>104</td><td>공지사항 안내 104 입니다.</td><td>2단계 카테고리 3</td><td>홍길동</td><td>2016.08.04</td><td><span class="glyphicon glyphicon-paperclip"></span></td></tr>
+									<tr><td>104</td><td>공지사항 안내 104 입니다.</td><td>2단계 카테고리 3</td><td>홍길동</td><td>2016.08.04</td><td><span class="glyphicon glyphicon-paperclip"></span></td></tr>
+									<tr><td>104</td><td>공지사항 안내 104 입니다.</td><td>2단계 카테고리 3</td><td>홍길동</td><td>2016.08.04</td><td><span class="glyphicon glyphicon-paperclip"></span></td></tr>
+									<tr><td>104</td><td>공지사항 안내 104 입니다.</td><td>2단계 카테고리 3</td><td>홍길동</td><td>2016.08.04</td><td><span class="glyphicon glyphicon-paperclip"></span></td></tr>
+									<tr><td>104</td><td>공지사항 안내 104 입니다.</td><td>2단계 카테고리 3</td><td>홍길동</td><td>2016.08.04</td><td><span class="glyphicon glyphicon-paperclip"></span></td></tr>
+									<tr><td>104</td><td>공지사항 안내 104 입니다.</td><td>2단계 카테고리 3</td><td>홍길동</td><td>2016.08.04</td><td><span class="glyphicon glyphicon-paperclip"></span></td></tr>
+									<tr><td>104</td><td>공지사항 안내 104 입니다.</td><td>2단계 카테고리 3</td><td>홍길동</td><td>2016.08.04</td><td><span class="glyphicon glyphicon-paperclip"></span></td></tr>
+									<tr><td>104</td><td>공지사항 안내 104 입니다.</td><td>2단계 카테고리 3</td><td>홍길동</td><td>2016.08.04</td><td><span class="glyphicon glyphicon-paperclip"></span></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 text-center">
+							<button class="btn btn-primary pull-right">등록</button>
+							<nav aria-label="Page navigation">
+								<ul class="pagination">
+									<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+								    <li><a href="#">1</a></li>
+								    <li><a href="#">2</a></li>
+								    <li><a href="#">3</a></li>
+								    <li><a href="#">4</a></li>
+								    <li><a href="#">5</a></li>
+								    <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+							  </ul>
+							</nav>
+						</div>
+					</div>
+
+				</div><!-- main 끝 -->
+			</div>
+		</div>
+	
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="dist/summernote.min.js"></script>
+<script src="dist/jquery.validate.min.js"></script>
+<script src="dist/summernote-ko-KR.min.js"></script>
+<script src="dist/messages_ko.min.js"></script>
+<script src="assets/js/toggleFontSize.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

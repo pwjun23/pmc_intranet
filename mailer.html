@@ -1,0 +1,19 @@
+﻿<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mailer.css">
+<script language="javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script language="javascript" src="mailer.js"></script>
+<script language="javascript">
+$(function() {
+  var box1 = new RBox("#reciever1");
+  var box2 = new RBox("#reciever2");
+  box1.setMemberList([{id:'id1',name:'이성헌',dept:'인사부',email:'shlee@innerinfo.net'},{id:'id2',name:'이정헌',dept:'인사부',email:'shlee@innerinfo.net'},{id:'id3',name:'김성헌',dept:'인사부',email:'shlee@innerinfo.net'},{id:'id4',name:'김지영',dept:'인사부',email:'shlee@innerinfo.net'}]);
+  box2.setMemberList([{id:'id1',name:'이성헌1',dept:'인사부',email:'shlee@innerinfo.net'},{id:'id2',name:'이정헌1',dept:'인사부',email:'shlee@innerinfo.net'},{id:'id3',name:'김성헌1',dept:'인사부',email:'shlee@innerinfo.net'},{id:'id4',name:'김지영1',dept:'인사부',email:'shlee@innerinfo.net'}]);
+});
+</script>
+</head>
+<body> 
+<div id="reciever1" class="mailer" style="width:800px;border:solid 1px #000000;"></div> 
+<div id="reciever2" class="mailer" style="width:300px;border:solid 1px #000000;"></div> 
+</body>
+</html>

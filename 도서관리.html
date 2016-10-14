@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9 ie8" dir="ltr" lang="ko-KR"> <![endif]-->
+	<!--[if IE 9]> <html class="no-js lt-ie10 ie9" dir="ltr" lang="ko-KR"> <![endif]-->
+	<meta charset="UTF-8">
+	<title>폴리미래인트라넷 게시판 관리페이지</title>
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="dist/summernote.css" rel="stylesheet">	
+	<link href="dist/bootstrap-treeview.min.css" rel="stylesheet">	
+	<link rel="stylesheet" href="css/style.css">
+
+	
+</head>
+<body>
+<!--[if lte IE 8]>
+<p class="browserupgrade">사용 중인 웹 브라우저는 <strong>보안이 보장되지 않는 오래되었습니다</strong>.
+<a href="http://browsehappy.com/">사용 중인 웹 브라우저를 업그레이드</a>하셔서 안전하고 빠른 웹 서핑을 하시길 권합니다.</p>
+<![endif]-->
+<!-- <div class="gnb">
+	<div class="container">
+		<div class="row">
+			<div class="">
+			</div>
+		</div>
+	</div>
+</div> -->
+<!-- <header class="page-header">
+	<nav class="navbar">
+	        <div class="navbar-header  col-xs-2">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#"><h1><img src="images/logo_pmc_white.png" alt="폴리미래로고" class="brand-img"></h1></a>
+	        </div>
+	        <div id="navbar" class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav navbar-right">
+	            <li><a href="#"></a></li>
+	            <li><a href="#"></a></li>
+	            <li><a href="#"></a></li>
+	            <li><a href="#"></a></li>
+	          </ul>
+	        </div> 
+	        <div class="col-xs-10"></div>
+	    </nav> 
+</header>-->
+<div class="body">	
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2 sidebar">
+					<div class="row nav-wrap">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#"><h1><img src="images/logo_pmc_white.png" alt="폴리미래로고" class="brand-img"></h1></a>
+						</div>
+					</div>
+					<ul class="nav nav-sidebar">
+			            <li><a href="게시판생성.html">게시판생성</a></li>
+			            <li><a href="게시판수정.html">게시판수정</a></li>
+			            <li><a href="공지사항.html">공지사항</a></li>
+			            <li><a href="도서관리.html">도서관리</a></li>
+			            <li><a href="도서대출반납현황.html">도서 대출 반납 현황</a></li>		            
+			            <li><a href="도서보유현황.html">도서보유현황</a></li>
+			        </ul>
+				</div>
+				<div class="col-xs-10 main doc-bookManagement">
+					<div class="row doc-bookManagement-search">
+						<div class="col-xs-12">
+							<h2>도서관리</h2>
+							<hr>
+							<form class="form-inline">
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="pull-right">
+											<div class="form-group">
+												<select name="" id="" class="form-control">
+													<option value="">도서명</option>
+													<option value="">지은이</option>
+													<option value="">출판사</option>
+												</select>
+											</div>
+											<div class="form-group"><input type="text" class="form-control"></div>
+											<button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"></span>&nbsp;검색</button>
+										</div>
+									</div>
+								</div>
+							</form>
+							<br>
+						</div>
+						<div class="col-xs-12">
+							<table class="table table-bordered table-striped">
+								<thead>
+									<tr>
+										<th>번호</th><th>도서명</th><th>지은이</th><th>출판사</th><th>발행년도</th><th>서고</th><th>등록번호</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td><a href="#" class="link-detail">설민석의 조선왕조실록 : 대한민국이 선택한 역사 이야기</a></td>
+										<td>설민석</td>
+										<td>세계사</td>
+										<td>2016</td>
+										<td>본사</td>
+										<td>1-12</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td><a href="#" class="link-detail" >응답하라 연애세포</a></td>
+										<td>김벗들</td>
+										<td>북뱅</td>
+										<td>2015</td>
+										<td>본사</td>
+										<td>1-13</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td><a href="#" class="link-detail" >조선 소년 무걸, 무기를 만들다</a></td>
+										<td>이규희</td>
+										<td>그린북</td>
+										<td>2016</td>
+										<td>본사</td>
+										<td>1-15</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td><a href="#" class="link-detail" >설민석의 조선왕조실록 : 대한민국이 선택한 역사 이야기</a></td>
+										<td>설민석</td>
+										<td>세계사</td>
+										<td>2016</td>
+										<td>본사</td>
+										<td>1-12</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td><a href="#" class="link-detail" >설민석의 조선왕조실록 : 대한민국이 선택한 역사 이야기</a></td>
+										<td>설민석</td>
+										<td>세계사</td>
+										<td>2016</td>
+										<td>본사</td>
+										<td>1-12</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td><a href="#" class="link-detail" >설민석의 조선왕조실록 : 대한민국이 선택한 역사 이야기</a></td>
+										<td>설민석</td>
+										<td>세계사</td>
+										<td>2016</td>
+										<td>본사</td>
+										<td>1-12</td>
+									</tr>																		
+								</tbody>
+							</table>
+						</div>
+						<div class="col-xs-12 text-center">
+							<button type="button" class="btn btn-info pull-left btn-bookMangement-add"><span class="glyphicon glyphicon-pencil"></span>&nbsp;등록</button>
+							<nav aria-label="Page navigation">
+								<ul class="pagination">
+									<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+								    <li><a href="#">1</a></li>
+								    <li><a href="#">2</a></li>
+								    <li><a href="#">3</a></li>
+								    <li><a href="#">4</a></li>
+								    <li><a href="#">5</a></li>
+								    <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+							  </ul>
+							</nav>
+						</div>
+					</div>
+					<div class="row doc-bookManagement-info hide">		
+						<div class="col-xs-12"><h2>도서정보</h2><button class="close close-bookManagement-info"><span class="glyphicon glyphicon-remove"></span></button><hr></div>
+						
+						<div class="col-xs-4">
+							<img class="thumbnail" width="100%" src="images/bookCover_00.jpg" alt="책설명">			
+						</div>
+						<div class="col-xs-4">
+							<table class="table table-bordered table-bookDesc">
+								<tbody>
+									<tr><th>서명</th><td>1Q84 2 (7월-9월)</td></tr>
+									<tr><th>저자</th><td>무라카미 하루키</td></tr>
+									<tr><th>출판사</th><td>문학동네</td></tr>
+									<tr><th>출판연도</th><td>2009</td></tr>
+									<tr><th>서명권차</th><td></td></tr>
+									<tr><th>ISBN</th><td>9788954608657</td></tr>
+									<tr><th>등록번호</th><td>1-9</td></tr>
+									<tr><th>소장위치</th><td>본사</td></tr>
+									<tr><th>도서 상태</th><td>대출중</td></tr>
+									<tr><th>대출자</th><td>홍길동</td></tr>
+									<tr><th>반납예정일</th><td>2016.08.26</td></tr>
+								</tbody>
+							</table>							
+							<div class="">
+								<button class="btn btn-info btn-bg-dg w100">대출신청</button>
+								<button class="btn btn-info w100 hide">대출연장</button>
+								<button class="btn btn-info w100 hide">대출예약</button>
+								<button class="btn btn-info w100 hide">예약취소</button>
+								<button class="btn btn-danger w100">반납</button>
+								<button class="btn btn-default pull-right close-bookManagement-info" >목복보기</button>
+								
+							</div>							
+						</div>						
+					</div>
+					<div class="row doc-bookManagement-add hide">		
+						<div class="col-xs-12"><h2>도서등록</h2><button class="close close-bookManagement-add"><span class="glyphicon glyphicon-remove"></span></button><hr></div>
+						<form action="" class="form-inline">
+							
+								<div class="col-xs-12 form-group">
+									<label for="" class="w50">ISBN</label><input type="text" class="form-control" value="9788954608657">
+									<button class="btn btn-info w60">검색</button>
+								</div>							
+								<div class="col-xs-12 form-group">
+									<label for="" class="w50">서명</label><input type="text" class="form-control w659" value="1Q84 2 (7월-9월)">
+								</div>
+							
+								<div class="col-xs-4 text-center">
+									<img class="thumbnail" width="100%" src="images/bookCover_00.jpg" alt="책설명">
+									<button class="btn btn-sm btn-default imageSelect"><span class="glyphicon glyphicon-plus"></span>&nbsp;사진 선택</button>
+									<button class="btn btn-sm btn-default imageUpload"><span class="glyphicon glyphicon-upload"></span>&nbsp;사진 올리기</button>
+								</div>
+								<div class="col-xs-4">
+									<table class="table table-bookDesc">
+										<tbody>
+											<tr><th><label for="">저자&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" class="form-control text-left" value="무라카미 하루키"></th></tr>
+											<tr><th><label for="">출판사&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" class="form-control text-left" value="문학동네"></th></tr>
+											<tr><th><label for="">출판연도&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" class="form-control text-left" value="2009"></th></tr>
+											<tr><th><label for="">서명권차&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" class="form-control text-left" value=""></th></tr>
+											<tr><th><label for="">ISBN&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" class="form-control text-left" value="9788954608657"></th></tr>
+											<tr><th><label for="">등록번호&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" class="form-control text-left" value="1-9"></th></tr>
+											<tr><th><label for="">소장위치&nbsp;&nbsp;&nbsp;&nbsp;</label>
+											<select name="" id="" class="form-control" style="width:172px;">
+												<option value="">본사</option>
+												<option value="">별관</option>
+												<option value="">창고</option>
+											</select></th></tr>
+											<tr><th><label for="">도서상태&nbsp;&nbsp;&nbsp;&nbsp;</label>
+											<select name="" id="" class="form-control" style="width:172px;">
+												<option value="">대출가능</option>
+												<option value="">대출중</option>
+												<option value="">예약중</option>
+												<option value="">분실</option>
+												<option value="">파손</option>
+												<option value="">기증</option>
+												<option value="">폐기</option>
+												<option value="">대출불가</option>
+											</select></th></tr>
+
+
+											<!-- <tr><th>출판사</th><td>문학동네</td></tr>
+											<tr><th>출판연도</th><td>2009</td></tr>
+											<tr><th>서명권차</th><td></td></tr>
+											<tr><th>ISBN</th><td>9788954608657</td></tr>
+											<tr><th>등록번호</th><td>1-9</td></tr>
+											<tr><th>소장위치</th><td>본사</td></tr>
+											<tr><th>도서 상태</th><td>대출중</td></tr>-->
+										</tbody>
+									</table>
+								</div>
+							<div class="row">
+								<div class="col-xs-12 text-center wrap-btn">
+									<button class="btn btn-primary">저장</button>				
+									<button class="btn btn-danger">취소</button>
+								</div>
+							</div>
+						</form>
+						
+					</div>				
+				</div><!-- main 끝 -->
+			</div>
+		</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="dist/summernote.min.js"></script>
+<script src="dist/jquery.validate.min.js"></script>
+<script src="dist/summernote-ko-KR.min.js"></script>
+<script src="dist/messages_ko.min.js"></script>
+<script src="assets/js/toggleFontSize.js"></script>
+<script src="js/common.js"></script>
+<script type="text/javascript">
+	var $bookManagement_search = $('.doc-bookManagement-search');// 초기 검색 화면
+	var $bookManagement_info = $('.doc-bookManagement-info');//상세보기 화면
+	var $bookManagement_add = $('.doc-bookManagement-add');//등록 화면
+
+	var $link_detail = $('.link-detail');//상세보기 a태그
+	var $btn_bookmanagement_add = $('.btn-bookMangement-add')//등록 버튼
+	var $btn_close_bookmanagement_info = $('.close-bookManagement-info');//상세보기 닫기 버튼
+	var $btn_close_bookmanagement_add = $('.close-bookManagement-add');//등록화면 닫기 버튼
+
+	$link_detail.on('click',function(e){		
+		e.preventDefault();
+		$bookManagement_info.removeClass('hide');
+		$bookManagement_search.addClass('hide');
+	});
+
+	$btn_close_bookmanagement_info.on('click',function(e){
+		$bookManagement_info.addClass('hide');
+		$bookManagement_search.removeClass('hide');
+	});
+
+	$btn_bookmanagement_add.on('click',function(e){
+		$bookManagement_add.removeClass('hide');
+		$bookManagement_search.addClass('hide');
+	});
+
+	$btn_close_bookmanagement_add.on('click',function(e){
+		$bookManagement_add.addClass('hide');
+		$bookManagement_search.removeClass('hide');
+	});
+
+</script>
+</body>
+</html>

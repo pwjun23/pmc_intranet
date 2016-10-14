@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9 ie8" dir="ltr" lang="ko-KR"> <![endif]-->
+	<!--[if IE 9]> <html class="no-js lt-ie10 ie9" dir="ltr" lang="ko-KR"> <![endif]-->
+	<meta charset="UTF-8">
+	<title>폴리미래인트라넷 게시판 관리페이지</title>
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="dist/summernote.css" rel="stylesheet">	
+	<link rel="stylesheet" href="css/style.css">
+
+	
+</head>
+<body>
+<!--[if lte IE 8]>
+<p class="browserupgrade">사용 중인 웹 브라우저는 <strong>보안이 보장되지 않는 오래되었습니다</strong>.
+<a href="http://browsehappy.com/">사용 중인 웹 브라우저를 업그레이드</a>하셔서 안전하고 빠른 웹 서핑을 하시길 권합니다.</p>
+<![endif]-->
+<!-- <div class="gnb">
+	<div class="container">
+		<div class="row">
+			<div class="">
+			</div>
+		</div>
+	</div>
+</div> -->
+<!-- <header class="page-header">
+	<nav class="navbar">
+	        <div class="navbar-header  col-xs-2">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#"><h1><img src="images/logo_pmc_white.png" alt="폴리미래로고" class="brand-img"></h1></a>
+	        </div>
+	        <div id="navbar" class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav navbar-right">
+	            <li><a href="#"></a></li>
+	            <li><a href="#"></a></li>
+	            <li><a href="#"></a></li>
+	            <li><a href="#"></a></li>
+	          </ul>
+	        </div>
+	        <div class="col-xs-10"></div>
+	    </nav> 
+</header>-->
+<div class="body">	
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2 sidebar">
+					<div class="row nav-wrap">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#"><h1><img src="images/logo_pmc_white.png" alt="폴리미래로고" class="brand-img"></h1></a>
+						</div>
+					</div>
+					<ul class="nav nav-sidebar">
+			            <li><a href="게시판생성.html">게시판생성</a></li>
+			            <li><a href="게시판수정.html">게시판수정</a></li>
+			            <li><a href="공지사항.html">공지사항</a></li>
+			            <li><a href="도서관리.html">도서관리</a></li>
+			            <li><a href="도서대출반납현황.html">도서 대출 반납 현황</a></li>		            
+			            <li><a href="도서보유현황.html">도서보유현황</a></li>
+			        </ul>
+				</div>
+				<div class="col-xs-10 main">
+					<h2>게시판 생성</h2>
+					<!-- 폼 시작 -->
+					<form action="" id="form-setting" class="form-inline">
+						<div class="row doc-header">
+							<div class="form-inline">
+								<div class="col-xs-4">
+									<div class="form-group"><label for="noticeId">게시판 아이디</label><input type="text" class="form-control" id="noticeId" placeholder="게시판 아이디" required></div>
+								</div>
+								<div class="col-xs-8">
+									<div class="form-group"><label for="noticeName">게시판 명</label><input type="text" class="form-control w600" id="noticeName" placeholder="게시판 명" required></div>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="col-xs-12">
+								<ul class="nav nav-tabs" role="tablist" id="tab-setting">
+								  <li role="presentation" class="active"><a href="#setting_default" aria-controls="setting_default" role="tab" data-toggle="tab">기본설정</a></li>
+								  <li role="presentation"><a href="#setting_item" aria-controls="setting_item" role="tab" data-toggle="tab">항목설정</a></li>
+								  <!-- <li role="presentation"><a href="#setting_category" aria-controls="setting_category" role="tab" data-toggle="tab">카테고리설정</a></li> -->
+								  <li role="presentation"><a href="#" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="카테고리는 수정화면에서 설정하실 수 있습니다.">카테고리설정</a></li>
+								</ul>
+								<!-- Tab panes -->
+								<div class="tab-content">
+<!-- 기본설정 탭 -->
+								  <div role="tabpanel" class="tab-pane fade in active" id="setting_default">
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="form-group">
+											  <label for="" class="w120">게시판 형태 </label>
+											  <select class="form-control w120" id="">
+											    <option value="">자료실</option>
+											    <option value="">사진자료실</option>
+											    <option value="">아코디언형</option>
+											    <option value="">뉴스형</option>
+											  </select>
+											</div>
+										</div>
+										<div class="col-xs-12">
+											<div class="form-group">
+												<label for="" class="w120">업로드 파일 제한</label>
+												<input type="text" class="form-control w120" placeholder=""> MB
+											</div>
+										</div>
+										<div class="col-xs-12">
+											<div class="form-group">
+											  <label for="" class="w120">게시물 목록 갯수</label>
+											  <select class="form-control w120" id="">
+											    <option value="">10</option>
+											    <option value="">20</option>
+											    <option value="">30</option>
+											    <option value="">40</option>
+											    <option value="">50</option>
+											  </select>
+											</div>
+										</div>
+										<div class="col-xs-12">
+											<div class="form-group">
+											  <label for="" class="w120">첨부파일 중복방지</label>
+											  <select class="form-control w120" id="">
+											    <option value="">원본 파일명 사용</option>
+											    <option value="">파일명 채번</option>
+											  </select>
+											</div>
+										</div>
+										<div class="col-xs-12 editor-text">
+											<div class="form-group"><label for="">상단 게시 문구</label></div>
+											<div id="headerNoticeText"></div>
+										</div>
+									</div>
+								  </div><!-- 기본설정 탭 끝 -->
+<!-- 항목설정 탭 -->
+								  <div role="tabpanel" class="tab-pane fade" id="setting_item">
+								  	<table class="table">
+								  		<thead><tr><th class=""></th><th>필드명</th><th>한글명</th><th>영문명</th><th>목록순서</th></tr></thead>
+								  		<tbody>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v01" checked></div></td>
+								  				<td><label for="v01">번호</label></td>
+								  				<td><input type="text" value="번호" placeholder="번호" class="form-control" ></td>
+								  				<td><input type="text" value="No" placeholder="No" class="form-control" ></td>
+								  				<td><div class="form-group">
+													  <label for="" class="w120 sr-only">목록순서</label>
+													  <select class="form-control " id="">
+													    <option value="">1</option>
+													    <option value="">2</option>
+													    <option value="">3</option>
+													    <option value="">4</option>
+													    <option value="">5</option>
+													  </select>
+													</div>
+												</td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v01" checked></div></td>
+								  				<td><label for="v01">제목</label></td>
+								  				<td><input type="text" value="제목" placeholder="제목" class="form-control" ></td>
+								  				<td><input type="text" value="title" placeholder="title" class="form-control" ></td>
+								  				<td><div class="form-group">
+													  <label for="" class="w120 sr-only">목록순서</label>
+													  <select class="form-control " id="">
+													    <option value="">2</option>
+													    <option value="">3</option>
+													    <option value="">4</option>
+													    <option value="">5</option>
+													  </select>
+													</div>
+												</td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v02" checked></div></td>
+								  				<td><label for="v02">작성자명</label></td>
+								  				<td><input type="text" value="작성자명" placeholder="작성자명" class="form-control" ></td>
+								  				<td><input type="text" value="Author" placeholder="Author" class="form-control" ></td>
+								  				<td><div class="form-group">
+													  <label for="" class="w120 sr-only">목록순서</label>
+													  <select class="form-control " id="">
+													    <option value="">3</option>
+													    <option value="">4</option>
+													    <option value="">5</option>
+													  </select>
+													</div>
+												</td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v03" checked></div></td>
+								  				<td><label for="v03">전화번호</label></td>
+								  				<td><input type="text" value="전화번호" placeholder="전화번호" class="form-control" ></td>
+								  				<td><input type="text" value="Phone No" placeholder="Phone No" class="form-control" ></td>
+								  				<td><div class="form-group">
+													  <label for="" class="w120 sr-only">목록순서</label>
+													  <select class="form-control " id="">
+													    <option value="">0</option>
+													  </select>
+													</div>
+												</td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0" checked></div></td>
+								  				<td><label for="v0">이메일</label></td>
+								  				<td><input type="text" value="이메일" placeholder="이메일" class="form-control" ></td>
+								  				<td><input type="text" value="E-Mail" placeholder="Phone No" class="form-control" ></td>
+								  				<td><div class="form-group">
+													  <label for="" class="w120 sr-only">목록순서</label>
+													  <select class="form-control " id="">
+													    <option value="">0</option>
+													  </select>
+													</div>
+												</td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0" checked></div></td>
+								  				<td><label for="v0">부서명</label></td>
+								  				<td><input type="text" value="부서명" placeholder="부서명" class="form-control" ></td>
+								  				<td><input type="text" value="Dept" placeholder="Dept" class="form-control" ></td>
+								  				<td><div class="form-group">
+													  <label for="" class="w120 sr-only">목록순서</label>
+													  <select class="form-control " id="">
+													    <option value="">0</option>
+													  </select>
+													</div>
+												</td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0" checked></div></td>
+								  				<td><label for="v0">내용</label></td>
+								  				<td><input type="text" value="내용" placeholder="내용" class="form-control" ></td>
+								  				<td><input type="text" value="Contents" placeholder="Contents" class="form-control" ></td>
+								  				<td><div class="form-group">
+													  <label for="" class="w120 sr-only">목록순서</label>
+													  <select class="form-control " id="">
+													    <option value="">0</option>
+													  </select>
+													</div>
+												</td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0" checked></div></td>
+								  				<td><label for="v0">등록일시</label></td>
+								  				<td><input type="text" value="등록일시" placeholder="등록일시" class="form-control" ></td>
+								  				<td><input type="text" value="Regist" placeholder="Regist" class="form-control" ></td>
+								  				<td><div class="form-group">
+													  <label for="" class="w120 sr-only">목록순서</label>
+													  <select class="form-control " id="">
+													    <option value="">0</option>
+													  </select>
+													</div>
+												</td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0"></div></td>
+								  				<td><label for="v0">수정일시</label></td>
+								  				<td><input type="text" value="수정일시" placeholder="수정일시" class="form-control" ></td>
+								  				<td><input type="text" value="Regist" placeholder="Regist" class="form-control" ></td>
+								  				<td></td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0"></div></td>
+								  				<td><label for="v0">게시시작일시</label></td>
+								  				<td><input type="text" value="게시시작일시" placeholder="게시시작일시" class="form-control" ></td>
+								  				<td><input type="text" value="Start" placeholder="Start" class="form-control" ></td>
+								  				<td></td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0"></div></td>
+								  				<td><label for="v0">게시종료일시</label></td>
+								  				<td><input type="text" value="게시종료일시" placeholder="게시종료일시" class="form-control" ></td>
+								  				<td><input type="text" value="End" placeholder="End" class="form-control" ></td>
+								  				<td></td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0" checked></div></td>
+								  				<td><label for="v0">첨부파일</label></td>
+								  				<td><input type="text" value="첨부파일" placeholder="첨부파일" class="form-control" ></td>
+								  				<td><input type="text" value="Attachment" placeholder="Attachment" class="form-control" ></td>
+								  				<td><div class="form-group">
+													  <label for="" class="w120 sr-only">목록순서</label>
+													  <select class="form-control " id="">
+													    <option value="">5</option>
+													  </select>
+													</div>
+												</td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0"></div></td>
+								  				<td><label for="v0">필드1</label></td>
+								  				<td><input type="text" value="" placeholder="필드1" class="form-control"></td>
+								  				<td><input type="text" value="" placeholder="Field1" class="form-control"></td>
+								  				<td></td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0"></div></td>
+								  				<td><label for="v0">필드2</label></td>
+								  				<td><input type="text" value="" placeholder="필드2" class="form-control"></td>
+								  				<td><input type="text" value="" placeholder="Field2" class="form-control"></td>
+								  				<td></td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0"></div></td>
+								  				<td><label for="v0">필드3</label></td>
+								  				<td><input type="text" value="" placeholder="필드3" class="form-control"></td>
+								  				<td><input type="text" value="" placeholder="Field3" class="form-control"></td>
+								  				<td></td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0"></div></td>
+								  				<td><label for="v0">필드4</label></td>
+								  				<td><input type="text" value="" placeholder="필드4" class="form-control"></td>
+								  				<td><input type="text" value="" placeholder="Field4" class="form-control"></td>
+								  				<td></td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0"></div></td>
+								  				<td><label for="v0">필드5</label></td>
+								  				<td><input type="text" value="" placeholder="필드5" class="form-control"></td>
+								  				<td><input type="text" value="" placeholder="Field5" class="form-control"></td>
+								  				<td></td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0"></div></td>
+								  				<td><label for="v0">필드6</label></td>
+								  				<td><input type="text" value="" placeholder="필드6" class="form-control"></td>
+								  				<td><input type="text" value="" placeholder="Field6" class="form-control"></td>
+								  				<td></td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0"></div></td>
+								  				<td><label for="v0">필드7</label></td>
+								  				<td><input type="text" value="" placeholder="필드7" class="form-control"></td>
+								  				<td><input type="text" value="" placeholder="Field7" class="form-control"></td>
+								  				<td></td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0"></div></td>
+								  				<td><label for="v0">필드8</label></td>
+								  				<td><input type="text" value="" placeholder="필드8" class="form-control"></td>
+								  				<td><input type="text" value="" placeholder="Field8" class="form-control"></td>
+								  				<td></td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0"></div></td>
+								  				<td><label for="v0">필드9</label></td>
+								  				<td><input type="text" value="" placeholder="필드9" class="form-control"></td>
+								  				<td><input type="text" value="" placeholder="Field9" class="form-control"></td>
+								  				<td></td>
+								  			</tr>
+								  			<tr>
+								  				<td><div class="checkbox"><input type="checkbox" value="" id="v0"></div></td>
+								  				<td><label for="v0">필드10</label></td>
+								  				<td><input type="text" value="" placeholder="필드10" class="form-control"></td>
+								  				<td><input type="text" value="" placeholder="Field10" class="form-control"></td>
+								  				<td></td>
+								  			</tr>
+								  		</tbody>
+								  	</table>
+								  	
+								  </div><!-- 항목설정 탭 끝-->
+								  <!-- 카테고리설정 탭 -->
+								  <div role="tabpanel" class="tab-pane fade" id="setting_category">
+								  	
+								  </div><!-- 카테고리설정 끝 -->
+								</div> <!-- tab-content 끝 -->
+							</div>
+						</div>						
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="btn-gruop pull-right"><button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>&nbsp;저장</button>&nbsp;&nbsp;<button class="btn btn-default"><span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;취소</button></div>
+							</div>
+						</div>
+					</form>
+				</div><!-- main 끝 -->
+			</div>
+		</div>
+	
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="dist/summernote.min.js"></script>
+<script src="dist/jquery.validate.min.js"></script>
+<script src="dist/summernote-ko-KR.min.js"></script>
+<script src="dist/messages_ko.min.js"></script>
+<script src="assets/js/toggleFontSize.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
