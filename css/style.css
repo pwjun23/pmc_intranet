@@ -749,23 +749,76 @@ table.table-permission input[type="text"] {
 
 /* 공지사항 > 일반 게시판 스타일 */
 
-table.table-notice th{
+table.table-board th{
   text-align: left;
  /* background: #d8d8d8;
   color: #606060; */
   font-weight: 500;
   border: 1px solid #f4f4f4 !important; } 
- table.table-notice td.title{
+table.table-board td.title{
   font-weight:bold; }  
-table.table-notice td {
+table.table-board td {
   background: white;
   text-align:left;}
-table.table-notice tr td.notice-body{
+table.table-board tr td.board-body{
 	word-break:break-all;
-	padding:40px;
+	padding:40px 0 0 40px;
 	min-height:400px;
 	height:400px;}	
-table.table-notice tr td a .file-donloard{
+table.table-board tr td a .file-donloard{
 	padding-right: 20px;
 	display:inline-block;
 	float:left;}  
+
+.mrT10{
+	margin-top: 10px;}	
+.mrT20{ 
+	margin-top:20px;}
+.mrT30{
+	margin-top: 30px;}	
+
+.mrR6{
+	margin-right: 6px;}	
+.mrR20{ 
+	margin-right: 20px;}
+.mrR30{
+	margin-right: 30px;}
+		
+.txa-r{
+	text-align: right;}
+.txa-l{
+	text-align: left;}
+.txa-c{
+	text-align: center;}	
+			
+.form-group .drz-bg{background:url(../images/draganddrop_bg.png) no-repeat; background-color:#f3f3f3; width:1070px; outline:1px solid #a9a9a9; left:60px !important;}	
+.form-group .drz-area{height:140px; left:60px !important; border:1px solid #ccc;  z-index:999; opacity:0; rgba(0,0,0,0.00); width:1070px !important;}
+
+.board-body .board-img li{margin-bottom:10px;}
+.board-body .board-img li img{ max-width:780px; min-width:400px;}
+.thumbnail a img{ height:168px; width:235px;}
+
+.media-list{ margin-bottom:20px;}
+.media-list .media{ border-bottom: 1px solid #ddd; padding: 0 0 10px 0;}
+.main h4.media-heading{ margin:4px 0 10px 0;}
+.media-object{ max-width:129px; height:97px;}
+.media-list .media .media-body p{ 
+	white-space: normal;
+    height: 3.9em;
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -webkit-box-orient: vertical;}
+.w640{
+	width:640px !important;}		
+.table-qAa > tbody>tr:nth-child(4n+1) {
+    background-color: #f9f9f9;
+}
+.table-qAa > tbody>tr:nth-child(4n-1) {
+    background-color:white;
+}
+.table-qAa > tbody>tr:nth-child(2n) {
+    background-color:white;
+}

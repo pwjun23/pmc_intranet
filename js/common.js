@@ -33,7 +33,7 @@ $(document).ready(function(){
 		    ['help', ['help']]
 
 		  ],
-		height:"200px"
+		height:"380px"
 	});
 
 	/* 유효성 검사 jqueryvalidation */
