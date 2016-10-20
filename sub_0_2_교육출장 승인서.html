@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9 ie8" dir="ltr" lang="ko-KR"> <![endif]-->
+	<!--[if IE 9]> <html class="no-js lt-ie10 ie9" dir="ltr" lang="ko-KR"> <![endif]-->
+	<meta charset="UTF-8">
+	<title>폴리미래인트라넷 게시판 관리페이지</title>
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="dist/summernote.css" rel="stylesheet">	
+	<link rel="stylesheet" href="dist/bootstrap-tagsinput.css">
+	<link rel="stylesheet" href="dist/bootstrap.fd.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	
+</head>
+<body>
+<!--[if lte IE 8]>
+<p class="browserupgrade">사용 중인 웹 브라우저는 <strong>보안이 보장되지 않는 오래되었습니다</strong>.
+<a href="http://browsehappy.com/">사용 중인 웹 브라우저를 업그레이드</a>하셔서 안전하고 빠른 웹 서핑을 하시길 권합니다.</p>
+<![endif]-->
+<!-- <div class="gnb">
+	<div class="container">
+		<div class="row">
+			<div class="">
+			</div>
+		</div>
+	</div>
+</div> -->
+<!-- <header class="page-header">
+	<nav class="navbar">
+	        <div class="navbar-header  col-xs-2">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#"><h1><img src="images/logo_pmc_white.png" alt="폴리미래로고" class="brand-img"></h1></a>
+	        </div>
+	        <div id="navbar" class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav navbar-right">
+	            <li><a href="#"></a></li>
+	            <li><a href="#"></a></li>
+	            <li><a href="#"></a></li>
+	            <li><a href="#"></a></li>
+	          </ul>
+	        </div>
+	        <div class="col-xs-10"></div>
+	    </nav> 
+</header>-->
+<div class="body">	
+		<div class="container">
+			<div class="row">
+				<div class="left sidebar">
+					<div class="navbar-header">
+						<a class="" href="#"><img src="images/brand.png" alt="폴리미래로고" class="brand-img"></a>
+						<div class="userArea">
+							<span class="department">정보시스템실</span>&nbsp;<span class="name">아무개</span><span class="rank">과장</span><button class="btn btn-default pull-right"><span class="icon-icon_menu"></span></button>
+						</div>
+						<div class="userStatus">
+							<div class="col-xs-4">
+								<span class="currentNum">1.2GB</span>&nbsp;<span class="icon-icon_sep"></span><span class="totalNum">&nbsp;2GB</span><br>
+								<span class="title">Capacity</span>
+							</div>
+							<div class="col-xs-4">
+								<span class="icon-icon_letter"></span><span class="currentNum">&nbsp;14</span><br>
+								<span class="title">should read </span>
+							</div>
+							<div class="col-xs-4">
+								<span class="icon-icon_doc"></span><span class="currentNum">&nbsp;12</span><br>
+								<span class="title">Waiting</span>
+							</div>
+						</div>
+
+					</div>
+					<ul class="nav nav-sidebar">
+			            <li><a href="#!"><span class="icon-icon_open"></span>공지사항<br><span class="subTitle">Notice</span></a>
+			            	<ul class="subMenu">
+			            		<li><a href="#!">일반공지</a></li>
+			            	</ul>
+			            </li>
+			            <li><a href="#!"><span class="icon-icon_open"></span>정책 및 규정<br><span class="subTitle">Policies and Regulations</span></a>
+			            	<ul class="subMenu">
+			            		<li><a href="#!">경영일반</a></li>
+			            	</ul>
+			            </li>
+			            <li><a href="#!"><span class="icon-icon_open"></span>HR Portal<br><span class="subTitle">HR Potal</span></a>
+			            	<ul class="subMenu">
+			            		<li><a href="#!">안내페이지</a></li>
+			            		<li><a href="#!">근태</a></li>
+			            		<li><a href="#!">평가</a></li>
+			            		<li><a href="#!">복리후생</a></li>
+			            	</ul>
+			            </li>
+			            <li><a href="#!"><span class="icon-icon_open"></span>업무지원<br><span class="subTitle">Business Support</span></a>
+			            	<ul class="subMenu">
+			            		<li><a href="#!">전사평가회의</a></li>
+			            		<li><a href="#!">OPT Meeting</a></li>
+			            		<li><a href="#!">운송단가동향</a></li>
+			            		<li><a href="#!">업무통제사건보고</a></li>
+			            		<li><a href="#!">Progress Status Report</a></li>
+			            		<li><a href="#!">법정자격관리</a></li>
+			            		<li><a href="#!">영업부문 자료 공유</a></li>
+			            		<li><a href="#!">사내도서관</a></li>
+			            	</ul>
+			            </li>
+			            <li class="active"><a href="#!"><span class="icon-icon_open"></span>전자결제<br><span class="subTitle">Electronic Settlement </span></a>
+			            	<ul class="subMenu">
+			            		<li class="active"><a href="#!">신청서 작성 <span class="badge">8</span></a></li>
+			            		<li class=""><a href="#!">결재 문서함 <span class="badge">8</span></a></li>
+			            		<li class=""><a href="#!">올린 문서함</a></li>
+			            		<li class=""><a href="#!">종결 문서함</a></li>
+			            	</ul>
+			            </li>
+			            <li><a href="#!"><span class="icon-icon_open"></span>문서관리<br><span class="subTitle">Document Management</span></a>
+			            	<ul class="subMenu">
+			            		<li><a href="#!">계약서 관리</a></li>
+			            		<li><a href="#!">법정교육증빙관리</a></li>
+			            	</ul>
+			            </li>
+			            <li><a href="#!"><span class="icon-icon_open"></span>내 정보<br><span class="subTitle">My page</span></a>
+			            	<ul class="subMenu">
+			            		<li><a href="#!">개인정보 수정</a></li>
+			            	</ul>
+			            </li>
+			            <li><a href="#!"><span class="icon-icon_open"></span>관리자 페이지<br><span class="subTitle">Admin Page</span></a>
+			            	<ul class="subMenu">
+			            		<li><a href="#!">관리</a></li>
+			            		<li><a href="#!">권한 관리</a></li>
+			            		<li><a href="#!">사용자 정보 관리</a></li>
+			            	</ul>
+			            </li>
+			        </ul>
+				</div>
+				<div class="right main">
+					<div class="main-content container-main-content">
+						<h2>신청서 작성</h2>
+						<ul class="nav nav-tabs" role="tablist" id="tab-setting">
+						  <li role="presentation" class="active"><a href="#" aria-controls="setting_default" role="tab" data-toggle="tab">신청서</a></li>
+						  <li role="presentation"><a href="#" aria-controls="setting_item" role="tab" data-toggle="tab">작성 예시</a></li>
+						</ul>
+						<!-- Tab panes -->
+						<div class="tab-content">
+						  <div role="tabpanel" class="tab-pane fade in active doc-applicationWrite">
+						  		<div class="row">
+						  			<div class="col-xs-12">
+						  				<div class="col-xs-9"><!-- 신청서 작성페이지 시작-->
+											<div class="form-TTR form-pad">
+												<h4>교육/출장 승인서</h4>
+												<div class="">
+												<h5>1. 신청자 [ Request Information ]</h5>													
+														<div class="form-group">
+														<div class="row">														
+															<div class="col-xs-2"><label for="">이름<br><small>Name</small></label></div>
+															<div class="col-xs-10">	<input type="text" class="form-control" id="" placeholder="이름"></div>
+														</div>	
+														</div>												
+														<div class="form-group">
+															<div class="row">															
+															<div class="col-xs-2"><label for="">동반출장자<br><small>Companion</small></label></div>
+															<div class="col-xs-10"><input type="text" value="김희선" data-role="tagsinput" class="form-control"></div>
+														</div>	
+													</div>													
+												</div>	
+																					
+												<div class="">
+												<h5>2. 신청내역 [ Request Information ]</h5>
+													<div class="row">												
+														<div class="col-xs-2"><label for="">구분<br><small>Diagnosis</small></label></div>
+														<div class="col-xs-10 form-inline pdB20">
+															<div class="col-xs-6">
+																<div class="radio">
+																	<label><input type="radio" name="a"> 국내출장<small>Domestic Travel</small></label>
+																</div>
+																<div class="radio">
+																	<label><input type="radio" name="a"> 해외출장<small>Overseas Travel</small></label>
+																</div>
+															</div>
+															<div class="col-xs-6">
+																<div class="radio">
+																<label><input type="radio" name="a"> 국내교육<small>Domestic Training</small></label>
+																</div>
+																<div class="radio">
+																	<label><input type="radio" name="a"> 해외교육<small>Overseas Training</small></label>
+																</div>
+															</div>						
+														</div>	
+													</div>	
+													
+													<div class="form-group">
+														<div class="row">
+															<div class="col-xs-2"><label for="">교육출장명<br><small>Travel/TrainingName</small></label></div>
+															<div class="col-xs-10"><input type="text" class="form-control" id="" placeholder="교육출장명"></div>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="row">														
+															<div class="col-xs-2"><label for="">목적<br><small>Objectives</small></label></div>
+															<div class="col-xs-10"><input type="text" class="form-control" id="" placeholder="목적"></div>
+														</div>
+													</div>
+													<!-- <label for="">장소<br><small>Country</small></label> -->
+													<div class="row">
+														<div class="col-xs-2"><label for="">장소<br><small>Location</small></label></div>
+														<div class="col-xs-5 form-inline">
+															<div class="form-group">																	
+																<label for="">국가<br><small>Country</small></label>
+																<input type="text" class="form-control" id="" placeholder="국가">													
+															</div>	
+														</div>
+														<div class="col-xs-5 form-inline">
+															<div class="form-group">														
+																<label for="">도시<br><small>City</small></label>
+																<input type="text" class="form-control" id="" placeholder="도시">
+															</div>												
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-xs-2"></div>
+														<div class="col-xs-10 form-inline">		
+															<div class="form-group">													
+																<label for="">회사/교육기관<br><small>Company/Institute</small></label>
+																<input type="text" class="form-control w460" id="" placeholder="회사/교육기관">
+															</div>
+														</div>
+													</div>
+													<div class="row">	
+														<div class="col-xs-2"></div>
+														<div class="col-xs-10 form-inline">		
+															<div class="form-group">	
+																<label for="">현지 연락처<br><small>Contact Information</small></label>
+																<input type="text"  class="form-control w450" id="" placeholder="현지 연락처">											
+															</div>	
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-xs-2"><label for="">날짜<br><small>Date</small></label></div>
+														<div class="col-xs-5 form-inline">
+															<div class="form-group">																	
+																<label for="">출발일<br><small>Depature</small></label>
+																<input type="date" class="form-control" id="" placeholder="국가">													
+															</div>	
+														</div>
+														<div class="col-xs-5 form-inline">
+															<div class="form-group">														
+																<label for="">도착일<br><small>Arrival</small></label>
+																<input type="date" class="form-control" id="" placeholder="도시">
+															</div>												
+														</div>										
+													</div>		
+												</div>
+												<div class="">
+												<h5>3. 비용 [ Cost ]</h5>
+													<div class="row">
+														<div class="col-xs-2"><label for="">합계<br><small>Sum</small></label></div>
+														<div class="col-xs-5 form-inline">
+															<div class="form-group">
+																<label for="">출장비/교육여비<br><small>Travel Cost</small></label>
+																<input type="text" class="form-control w130" id="" placeholder="0"><span class="unit">KRW</span>
+															</div>
+														</div>
+														<div class="col-xs-5 form-inline">
+															<div class="form-group">
+																<label for="">교육서비스비<br><small>Education Cost</small></label>
+																<input type="text" class="form-control w130" id="" placeholder="0"><span class="unit">KRW</span>
+															</div>
+														</div>
+													</div>
+													
+													<div class="form-group">
+														<div class="row">														
+															<div class="col-xs-2"><label for="">교통<br><small>Transition</small></label></div>
+															<div class="col-xs-10">	<input type="text" class="form-control" id="" placeholder="교통"></div>
+														</div>	
+													</div>
+													<div class="row">
+														<div class="col-xs-2"><label for="">숙박<br><small>Lodging</small></label></div>
+														<div class="col-xs-5 form-inline">
+															<div class="form-group">
+																<label for="">체크인<br><small>Check-in</small></label>
+																<input type="text" class="form-control w130" id="" placeholder="0"><span class="unit">KRW</span>
+															</div>
+														</div>
+														<div class="col-xs-5 form-inline">
+															<div class="form-group">
+																<label for="">체크아웃<br><small>Check-out</small></label>
+																<input type="text" class="form-control w130" id="" placeholder="0"><span class="unit">KRW</span>
+															</div>
+														</div>
+													</div>	
+													<div class="form-group">
+														<div class="row">														
+															<div class="col-xs-2"><label for="">식사<br><small>Meals</small></label></div>
+															<div class="col-xs-10 form-inline">	<input type="text" class="form-control w552" id="" placeholder="0"><span class="unit">KRW</span></div>
+														</div>	
+													</div>
+													<div class="form-group">
+														<div class="row">														
+															<div class="col-xs-2"><label for="">기타<br><small>Etc</small></label></div>
+															<div class="col-xs-10 form-inline">	<input type="text" class="form-control w552" id="" placeholder="0"><span class="unit">KRW</span></div>
+														</div>	
+													</div>
+												</div>		
+														
+											</div>
+										</div><!-- 신청서 작성페이지 끝 -->		
+											
+											
+											
+											
+											
+											
+											
+						  				<div class="col-xs-3" >
+						  					<div class="form-horizontal">
+						  						<div class="form-group"><label for="">분류</label>
+						  							<select name="" id="" class="form-control">
+						  								<option value="">휴가 신청서</option>
+						  							</select>
+						  						</div>
+						  					</div>
+						  					<div class="form-horizontal">
+						  						<div class="form-group">
+						  							<label for="">나의 결재선</label>
+						  							<select name="" id="" class="form-control">
+						  								<option value="">휴가 신청서용 결재선</option>
+						  							</select>
+						  						</div>
+						  						<div class="row">
+						  							<div class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-plus"></span>&nbsp;단계추가</div>
+						  						</div>
+						  						<br>
+						  						<div class="form-group">
+						  							<label for="">1차</label>
+						  							<label for="ch_parallel_0" class="checkbox pull-right"><input type="checkbox" id="ch_parallel_0">병렬결재 </label>
+						  							<input type="text" value="이순신 과장" data-role="tagsinput" class="form-control">
+						  						</div>
+						  						<div class="form-group">
+						  							<label for="">2차</label>
+						  							<label for="ch_parallel_1" class="checkbox pull-right"><input type="checkbox" id="ch_parallel_1">병렬결재 </label>
+						  							<input type="text" value="이순신 과장" data-role="tagsinput" class="form-control">
+						  						</div>
+						  						<div class="form-group">
+						  							<label for="">3차</label>
+						  							<label for="ch_parallel_2" class="checkbox pull-right"><input type="checkbox" id="ch_parallel_2">병렬결재 </label>
+						  							<input type="text" value="이순신 과장" data-role="tagsinput" class="form-control">	
+						  						</div>
+						  						<div class="form-group">
+						  							<label for="">참조</label>
+						  							<input type="text" value="이순신 과장" data-role="tagsinput" class="form-control">
+						  						</div>
+												<div class="" style="margin-top: -10px;margin-bottom: 0px;">
+													<div class="bfd-dropfield">
+														<div class="bfd-dropfield-inner" style="height: 50px; padding-top: 10px;">Drag & Drop Area</div>                
+													</div>
+													<div class="container-fluid bfd-files"></div>
+													<input type="file" accept="*" multiple style="margin-top: -10px;">
+												</div>
+												<br>
+												<div class="form-group">
+						  							<div class="row">
+						  								<div class="col-xs-4">
+						  									<label for="" class="">보안등급</label>
+						  								</div>
+						  								<div class="col-xs-8" style="margin-top: -10px;">
+						  									<select name="" id="" class="form-control">
+						  										<option value="">3등급</option>
+						  									</select>
+						  								</div>
+						  							</div>
+						  						</div>	
+											</div>									
+										</div>
+						  			</div>
+						  		</div>
+						  </div>
+						  <div role="tabpanel" class="tab-pane fade in" id="">
+						  	
+						  </div>
+
+						</div>
+					  <div class="pull-right application_btn" style="margin-bottom:40px;">
+					  	<button class="btn btn-primary"><span class="glyphicon glyphicon-save"></span>&nbsp;임시저장</button>
+					  	<button class="btn btn-warning"><span class="glyphicon glyphicon-ok"></span>&nbsp;결재요청</button>
+					  	<button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>&nbsp;취소</button>
+					  </div>
+					  <br><br>
+					</div>
+						
+						
+
+				</div><!-- main 끝 -->
+			</div>
+		</div>
+</div>
+<div class="footer">
+	<div class="container">
+			<div class="row">
+				<div class="left">
+					<ul>
+						<li><a href="#!">사이트작업</a><span class="icon-icon_sep"></span></li>
+						<li><a href="#!">위로탐색</a><span class="icon-icon_sep"></span></li>
+						<li><a href="#!">페이지</a><span class="icon-icon_sep"></span></li>
+						<li><a href="#!">즐겨찾기</a></li>    
+					</ul>
+				</div>
+				<div class="right">
+					<div class="container-main-content">
+						<ul class="lang">
+							<li><a class="active" href="">KR</a><span class="icon-icon_sep"></span></li>
+							<li><a href="">EN</a></li>
+						</ul>
+						<div class="dropup pull-right">
+						  <button class="btn btn-default dropdown-toggle btn-linkSites" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    Link Sites
+						    <img src="images/icon_up.png" class="icon-up">
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+						    <li><a href="#">폴리미래</a></li>
+						    <li><a href="#">폴리미래메인</a></li>
+						    <li><a href="#">폴리미래홈페이지</a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">폴리</a></li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="dist/summernote.min.js"></script>
+<script src="dist/jquery.validate.min.js"></script>
+<script src="dist/summernote-ko-KR.min.js"></script>
+<script src="dist/messages_ko.min.js"></script>
+<script src="assets/js/toggleFontSize.js"></script>
+<script src="dist/bootstrap-tagsinput.js"></script><!-- 참고 레퍼런스 http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/ -->
+<script src="dist/bootstrap.fd.js"></script>
+<script src="js/common.js"></script>
+<script>
+	
+</script>
+</body>
+</html>
