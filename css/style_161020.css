@@ -838,16 +838,6 @@ table.table-permission input[type="text"] {
   cursor: default; }
 .content-pdr .well {
   border-color: #ec2216; }
-.content-pdr .nav-pills > li > a {
-  border-radius: 0px;
-  font-weight: bold;
-  color: #31467b; }
-.content-pdr .nav-pills > li.active > a {
-  background-color: #31467b;
-  color: white;
-  font-weight: normal; }
-.content-pdr .tab-pane {
-  border-top: 1px solid #ccc; }
 
 /* 공지사항 > 일반 게시판 스타일 */
 table.table-notice th {

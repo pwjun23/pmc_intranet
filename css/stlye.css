@@ -745,109 +745,15 @@ table.table-permission input[type="text"] {
 .doc-modify-sign .btn-level {
   width: 90px; }
 
-/* depth3 네비게이션 */
 .nav-depth3 {
-  margin-top: -70px; }
-  .nav-depth3 > li {
-    float: left; }
-    .nav-depth3 > li > a {
-      font-size: 16px;
-      font-family: "SpoqaHanSans";
-      color: #3c4154;
-      line-height: 1.5;
-      text-align: center;
-      border-radius: 10px;
-      padding: 10px 15px; }
-    .nav-depth3 > li > a:hover {
-      background-color: #f2f2f2;
-      opacity: 0.902;
-      text-decoration: none;
-      color: #3c4154;
-      font-weight: bold; }
-  .nav-depth3 > li.active a {
-    border-width: 2px;
-    border-color: #ec2216;
-    border-style: solid;
-    border-radius: 10px;
-    background-color: #f2f2f2;
-    color: #ed2417;
-    font-weight: bold; }
-
-/* pdr 네비게이션 */
-.nav-pdr {
-  margin-left: -10px;
-  margin-right: -10px;
-  width: 100%;
-  display: inline-block;
-  margin-bottom: 20px; }
-  .nav-pdr > li {
-    float: left;
-    display: block;
-    position: relative;
-    z-index: 100;
-    padding-right: 10px;
-    padding-left: 10px; }
-    .nav-pdr > li > a {
-      border-width: 1px;
-      border-top: 4px;
-      border-color: #7f7f7f;
-      border-style: solid;
-      background-color: white;
-      width: 100%;
-      display: inline-block;
-      padding: 10px 20px;
-      text-align: center;
-      box-shadow: 0px 0px 0px white;
-      transition: .4s box-shadow ease; }
-    .nav-pdr > li > a:visited, .nav-pdr > li > a:focus {
-      text-decoration: none; }
-  .nav-pdr > li.active > a {
-    border-color: #193670;
-    color: #193670;
-    font-weight: bold;
-    box-shadow: 6px 6px 0px #f0f0f0;
-    text-decoration: none; }
-  .nav-pdr > li:hover > a {
-    background-color: #f6f6f6;
-    box-shadow: 6px 6px 0px #f0f0f0;
-    text-decoration: none; }
-  .nav-pdr .icon {
-    display: inline-block;
-    width: 100px;
-    height: 100px; }
-  .nav-pdr .icon-guideLine {
-    background: url(../images/icon_guideLine.svg) no-repeat center center; }
-
-.content-pdr h3 {
-  font-size: 16px;
-  font-size: 1.333rem;
-  margin-bottom: 10px;
-  font-weight: bold; }
-  .content-pdr h3 .icon-icon_head {
-    color: #ee2317;
-    font-size: 14px;
-    font-size: 1.167rem;
-    margin-right: 10px; }
-.content-pdr table .form-group {
-  margin-bottom: 0; }
-.content-pdr table > thead tr > th {
-  vertical-align: middle; }
-.content-pdr table > tbody tr td {
-  vertical-align: middle; }
-.content-pdr > table.table-hover tbody > tr {
-  cursor: default; }
-.content-pdr .well {
-  border-color: #ec2216; }
-.content-pdr .nav-pills > li > a {
-  border-radius: 0px;
-  font-weight: bold;
-  color: #31467b; }
-.content-pdr .nav-pills > li.active > a {
-  background-color: #31467b;
-  color: white;
-  font-weight: normal; }
-.content-pdr .tab-pane {
-  border-top: 1px solid #ccc; }
+  margin-top: -100px;
+  display: none; }
+  .nav-depth3 > li > a {
+    font-size: 16px;
+    font-family: "SpoqaHanSans";
+    color: #3c4154;
+    line-height: 1.5;
+    text-align: center; }
 
 /* 공지사항 > 일반 게시판 스타일 */
 table.table-notice th {
@@ -875,4 +781,4 @@ table.table-notice tr td a .file-donloard {
   display: inline-block;
   float: left; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=stlye.css.map */
