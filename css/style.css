@@ -850,13 +850,17 @@ table.table-permission input[type="text"] {
   border-top: 1px solid #ccc; }
 
 /* 공지사항 > 일반 게시판 스타일 */
-table.table-notice th {
+table.table-board th{
   text-align: left;
   /* background: #d8d8d8;
    color: #606060; */
   font-weight: 500;
-  border: 1px solid #f4f4f4 !important; }
+  border: 1px solid #f4f4f4 !important; 
+}
 
+table.table-notice th {
+
+}
 table.table-notice td.title {
   font-weight: bold; }
 
@@ -875,4 +879,161 @@ table.table-notice tr td a .file-donloard {
   display: inline-block;
   float: left; }
 
-/*# sourceMappingURL=style.css.map */
+table.table-board td.title{
+  font-weight:bold; }  
+table.table-board td {
+  background: white;
+  text-align:left;}
+table.table-board tr td.board-body{
+	word-break:break-all;
+	padding:40px 0 0 40px;
+	min-height:400px;
+	height:400px;}	
+table.table-board tr td a .file-donloard{
+	padding-right: 20px;
+	display:inline-block;
+	float:left;}  
+
+.mrT10{
+	margin-top: 10px;}	
+.mrT20{ 
+	margin-top:20px;}
+.mrT30{
+	margin-top: 30px;}	
+	
+.mrR6{
+	margin-right: 6px;}	
+.mrR20{ 
+	margin-right: 20px;}
+.mrR30{
+	margin-right: 30px;}
+	
+.pdB10{
+	padding-bottom:10px;}	
+.pdB20{
+	padding-bottom:20px;}		
+		
+.txa-r{
+	text-align: right;}
+.txa-l{
+	text-align: left;}
+.txa-c{
+	text-align: center;}	
+			
+.form-group .drz-bg{background:url(../images/draganddrop_bg.png) no-repeat; background-color:#f3f3f3; width:1070px; outline:1px solid #a9a9a9; left:60px !important;}	
+.form-group .drz-area{height:140px; left:60px !important; border:1px solid #ccc;  z-index:999; opacity:0; rgba(0,0,0,0.00); width:1070px !important;}
+
+.board-body .board-img li{margin-bottom:10px;}
+.board-body .board-img li img{ max-width:780px; min-width:400px;}
+.thumbnail a img{ height:168px; width:235px;}
+
+.media-list{ margin-bottom:20px;}
+.media-list .media{ border-bottom: 1px solid #ddd; padding: 0 0 10px 0;}
+.main h4.media-heading{ margin:4px 0 10px 0;}
+.media-object{ max-width:129px; height:97px;}
+.media-list .media .media-body p{ 
+	white-space: normal;
+    height: 3.9em;
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -webkit-box-orient: vertical;}
+.w640{
+	width:640px !important;}
+.w552{
+	width:552px !important;}	
+
+.w450{
+	width:450px !important;}		
+.w460{
+	width:460px !important;}			
+.table-qAa > tbody>tr:nth-child(4n+1) {
+    background-color: #f9f9f9;
+}
+.table-qAa > tbody>tr:nth-child(4n-1) {
+    background-color:white;
+}
+.table-qAa > tbody>tr:nth-child(2n) {
+    background-color:white;
+}
+
+
+/*.form-pad{
+	padding:20px 30px 0 0;}	
+.form-pad h5{
+	/*font-weight:bold;*/
+	/*padding-top:20px;
+	margin-bottom:20px;}
+.form-pad .form-group label{
+	font-weight:600;} 
+		
+.form-pad small{
+	font-weight:400;
+	color:#a9a9a9;
+	padding-left:0px;
+	font-size:0.9em;}
+.form-pad .pay input[type="text"]{
+	margin-top:-20px;
+}
+.form-pad .unit{
+	display: block;
+    float: right;
+    line-height: 34px;
+    vertical-align: middle;
+	padding-left:5px;
+}
+.form-pad .form-inline input[type="text"].form-control, .form-pad .form-inline input[type="date"].form-control {vertical-align:top;}*/
+
+.form-box .con-top-line1{ border-top:1px solid #e5e5e5;}
+.form-box .con-top-line2{ border-top:2px solid #ccc;}
+.form-box .con-head h4{ margin-bottom:0;}
+.form-box .con-head{
+	margin-top:20px;}
+.form-box .subtitle{ 
+	font-weight:bold;
+	margin-top:20px;
+	padding-left:8px;
+	background:url(../images/sub-title-bul.png) no-repeat;}
+.form-box .con-write table tr th, .con-write table tr td {
+    border: 1px solid #e5e5e5;
+    border-top: none;}
+.form-box .con-write table tr th{
+	padding: 4px 10px 2px;
+    width: 120px;
+    line-height: 24px;
+    vertical-align: middle;
+    color: #111;
+    text-align: right;
+    font-weight: 600;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #f5f5f5;}
+.form-box .con-write table tr td{
+	padding: 4px 10px 4px;
+    line-height: 28px;
+    vertical-align: middle;}	
+.form-box .con-write table tr td input{
+	height:26px;}	
+.form-box .con-write{
+	margin-bottom:6px;}
+.form-box .con-write table{
+	width:100%;}	
+.form-box small{
+	color:#999;
+	font-weight:400;}
+.form-box .con-write .radio{
+	float: left;
+    margin: 3px 10px 0 20px;}	
+.form-box .con-write .radio:nth-child(2){
+	float: left;
+    margin: 3px 10px 0 31px;}	
+.form-box .con-write .radio small{
+    padding-left:4px;
+	padding-top:0;}		
+.form-box .con-write .radio input{
+	margin-top:2px;}
+.con-write td{
+	    padding: 0 10px;}		
+	    
+
